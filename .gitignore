@@ -1,3 +1,13 @@
 .git
 .env
 airflow_settings.yaml
+dbt/logs/dbt.log
+dbt/paper_demo/.gitignore
+dbt/target/manifest.json
+dbt/terraform.tfstate
+dbt/target/graph_summary.json
+dbt/target/graph.gpickle
+dbt/target/partial_parse.msgpack
+dbt/target/run_results.json
+dbt/target/semantic_manifest.json
+.gitignore

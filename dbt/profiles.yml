@@ -1,0 +1,38 @@
+# demo_dbt: "paper_demo" # this needs to match the profile in your dbt_project.yml file
+# target: dev
+# outputs:
+# dev:
+# type: bigquery
+# method: oauth
+# project: paper-de # Replace this with your project id
+# dataset: dbt_paper-de # Replace this with dbt_your_name, e.g. dbt_bilbo
+# impersonate_service_account: paper-terraform-runner@paper-de.iam.gserviceaccount.com # replace with service account
+# # prod:
+# # type: bigquery
+# method: oauth
+# project: paper-de # Replace this with your project id
+# dataset: dbt_paper-de # Replace this with dbt_your_name, e.g. dbt_bilbo
+paper_demo:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: paper-de 
+      dataset: streaming
+      keyfile: /home/bu/.config/gcloud/application_default_credentials.json
+      threads: 1
+      timeout_seconds: 300
+      location: US
+  target: dev
+default:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: paper-de 
+      dataset: streaming
+      keyfile: /home/bu/.config/gcloud/application_default_credentials.json
+      threads: 1
+      timeout_seconds: 300
+      location: US
+  target: dev

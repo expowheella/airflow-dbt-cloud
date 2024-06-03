@@ -1,2 +1,6 @@
+postgres:
+    port: 5454
 project:
-  name: airflow-dbt-cloud
+    name: airflow-dbt-cloud
+webserver:
+    port: 8081
