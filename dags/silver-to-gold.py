@@ -41,7 +41,7 @@ default_args = {
 dag_file_name = __file__
 
 with DAG(
-    "silver-to-bronze",
+    "silver-to-gold",
     default_args=default_args,
         schedule_interval="@once",
     description='A simple DAG to trigger a dbt Cloud job',
