@@ -53,7 +53,7 @@ default_args = {
 
 # Define the DAG
 dag = DAG(
-    'paper_dbt_job',
+    'bronze-to-silver',
     default_args=default_args,
     description='A simple DAG to trigger a dbt Cloud job',
     schedule_interval=timedelta(days=1),
